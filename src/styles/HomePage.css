@@ -1,0 +1,43 @@
+.firstImage {
+  position: relative;
+  height: 100vh;
+}
+
+.secondImage {
+  background-color: #4a6741;
+  position: relative;
+  height: 100vh;
+}
+
+.contentHead {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  padding-top: 100px;
+  height: 100vh;
+  width: 100%;
+}
+
+.contentHeadFoot {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+.contentHead span.welcome {
+  color: aqua;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+
+.contentHeadFoot span.chef {
+  color: aqua;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
