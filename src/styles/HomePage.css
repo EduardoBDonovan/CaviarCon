@@ -32,7 +32,7 @@
 /* Styling for green sections */
 .green-section {
   height: 50vh;
-  background-color: #008000; /* Green color */
+  background-color: #4a6741; /* Green color */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,24 @@
   text-align: center;
   font-size: clamp(1.5rem, 3vw, 20rem);
   padding: 20px;
+}
+
+/* New: Split text container to divide section into thirds */
+.split-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Each third takes equal space and centers its content */
+.top-third,
+.middle-third,
+.bottom-third {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Responsive adjustments for mobile devices */

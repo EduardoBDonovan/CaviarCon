@@ -7,29 +7,43 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
-        <button className="hamburger" onClick={toggleSidebar}>
+      {/* Fixed hamburger button when sidebar is closed */}
+      {!open && (
+        <button className="hamburger-fixed" onClick={toggleSidebar}>
           ☰
         </button>
-      </div>
+      )}
+
+      {/* Sidebar with sliding animation */}
       <div className={`sidebar ${open ? "open" : ""}`}>
-        {/* <button className="close-btn" onClick={toggleSidebar}>
-          ×
-        </button> */}
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#section2">About</a>
-          </li>
-          <li>
-            <a href="#section3">Services</a>
-          </li>
-          <li>
-            <a href="#section4">Contact</a>
-          </li>
-        </ul>
+        {/* Hamburger button inside the sidebar */}
+        <button className="hamburger-sidebar" onClick={toggleSidebar}>
+          ☰
+        </button>
+        <div className="nav-container">
+          <ul>
+            <li>
+              <a href="#home" onClick={toggleSidebar}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#section2" onClick={toggleSidebar}>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#section3" onClick={toggleSidebar}>
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#section4" onClick={toggleSidebar}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
