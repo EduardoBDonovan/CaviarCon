@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/HomePage.css";
 import Navbar from "./Navbar";
 import ConFront from "../images/Con_Front.jpg";
@@ -9,6 +10,31 @@ import { SiTiktok, SiInstagram } from "react-icons/si";
 import { FiPhone, FiMail } from "react-icons/fi";
 
 const HomePage = () => {
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_PUBLIC_KEY' with your actual EmailJS credentials.
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
+  };
+
   return (
     <div className="homepage" id="home">
       {/* Static Navbar */}
@@ -61,7 +87,7 @@ const HomePage = () => {
         <h2>Get In Touch For Your Next Dinner Party</h2>
       </section>
 
-      {/* Section 5: Third Image with centered overlay text */}
+      {/* Section 5: Third Image with contact form in the middle */}
       <section
         className="parallax image-section"
         style={{ backgroundImage: `url(${ConFood})` }}
@@ -69,7 +95,16 @@ const HomePage = () => {
         <div className="split-text">
           <div className="top-third"></div>
           <div className="middle-third">
-            <h2>Seasonal Curated Menus</h2>
+            <form ref={form} onSubmit={handleSubmit} className="contact-form">
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
           </div>
           <div className="bottom-third"></div>
         </div>
