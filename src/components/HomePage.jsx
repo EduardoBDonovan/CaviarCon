@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/HomePage.css";
 import Navbar from "./Navbar";
@@ -12,29 +12,9 @@ import { FiPhone, FiMail } from "react-icons/fi";
 const HomePage = () => {
   const form = useRef();
 
-  // useEffect(() => {
-  //   if (window.innerWidth <= 768) {
-  //     const handleScroll = () => {
-  //       const parallaxElements = document.querySelectorAll(".parallax");
-  //       parallaxElements.forEach((el) => {
-  //         // Calculate how far the page has scrolled past the top of this element.
-  //         const offset = window.pageYOffset - el.offsetTop;
-  //         // Set the background position so that as you scroll,
-  //         // it offsets the element's movement, simulating a fixed background.
-  //         el.style.backgroundPosition = `center ${-offset}px`;
-  //       });
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-  //     // Run once initially to set the starting position.
-  //     handleScroll();
-  //     return () => window.removeEventListener("scroll", handleScroll);
-  //   }
-  // }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace with your EmailJS configuration details.
+    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_PUBLIC_KEY' with your actual EmailJS credentials.
     emailjs
       .sendForm(
         "YOUR_SERVICE_ID",

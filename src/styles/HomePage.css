@@ -160,8 +160,23 @@
 }
 
 @media (max-width: 768px) {
-  /* Ensure other properties remain as needed: */
-  .parallax {
+  .parallax.image-section:first-of-type {
+    background-image: url("../images/Con_Front_Mobile.jpg") !important;
+    background-attachment: scroll; /* Avoid fixed issues on mobile */
+    background-size: cover; /* Ensure it covers the section */
+    background-position: center;
+  }
+
+  .parallax.image-section:nth-of-type(3) {
+    background-image: url("../images/Con_Side_Mobile.jpg") !important;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .parallax.image-section:nth-of-type(5) {
+    background-image: url("../images/Con_Food_Mobile.jpg") !important;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
@@ -170,20 +185,9 @@
     display: block;
   }
 
+  /* Optionally adjust padding or font-size for mobile if desired */
   .image-section h1,
   .image-section h2 {
     padding: 0.75rem;
-  }
-
-  .parallax.image-section:first-of-type {
-    background-image: url("../images/Con_Front_Mobile.jpg") !important;
-  }
-
-  .parallax.image-section:nth-of-type(3) {
-    background-image: url("../images/Con_Side_Mobile.jpg") !important;
-  }
-
-  .parallax.image-section:nth-of-type(5) {
-    background-image: url("../images/Con_Food_Mobile.jpg") !important;
   }
 }
