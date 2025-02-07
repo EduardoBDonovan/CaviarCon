@@ -29,12 +29,12 @@ const Navbar = () => {
             </li>
             <li>
               <a href="#section2" onClick={toggleSidebar}>
-                About
+                Gallery
               </a>
             </li>
             <li>
               <a href="#section3" onClick={toggleSidebar}>
-                Services
+                Recipes
               </a>
             </li>
             <li>

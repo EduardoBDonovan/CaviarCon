@@ -19,7 +19,7 @@
   left: 0;
   padding: 20px;
   /* Responsive sidebar width: minimum 200px, scales with viewport, maximum 1000px */
-  width: clamp(200px, 20vw, 1000px);
+  width: clamp(200px, 20vw, 1200px);
   height: 100%;
   background-color: #4a6741;
   color: #ffead3;
@@ -77,7 +77,7 @@
   /* Responsive font size for navigation links */
   font-size: clamp(2rem, 4vw, 20rem);
   padding-left: clamp(5px, 2vw, 100px);
-  padding-block: clamp(10px, 4vw, 500px);
+  padding-block: clamp(10px, 2vw, 500px);
   display: block;
   width: 100%;
   text-align: left;

@@ -15,12 +15,15 @@ const HomePage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_PUBLIC_KEY' with your actual EmailJS credentials.
+    emailjs.init({
+      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    });
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "YOUR_PUBLIC_KEY"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -43,12 +46,12 @@ const HomePage = () => {
       {/* Section 1: First Image with split overlay text */}
       <section
         className="parallax image-section"
-        style={{ backgroundImage: `url(${ConFront})` }}
+        style={{ backgroundImage: `url(${ConSide})` }}
       >
         <div className="split-text">
           <div className="top-third">
             <h1>
-              Experiences by
+              Culinary Experiences by
               <br className="mobile-break" /> Connor McGlynn
             </h1>
           </div>
@@ -67,7 +70,7 @@ const HomePage = () => {
       {/* Section 3: Second Image with centered overlay text */}
       <section
         className="parallax image-section"
-        style={{ backgroundImage: `url(${ConSide})` }}
+        style={{ backgroundImage: `url(${ConFront})` }}
       >
         <div className="split-text">
           <div className="top-third">
@@ -95,11 +98,16 @@ const HomePage = () => {
         <div className="split-text">
           <div className="top-third"></div>
           <div className="middle-third">
-            <form ref={form} onSubmit={handleSubmit} className="contact-form">
-              <input type="text" name="name" placeholder="Name" required />
-              <input type="email" name="email" placeholder="Email" required />
+            <form ref={form} onSubmit={handleSubmit} className="contact_form">
+              <input type="text" name="user_name" placeholder="Name" required />
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Email"
+                required
+              />
               <textarea
-                name="message"
+                name="user_message"
                 placeholder="Message"
                 required
               ></textarea>
@@ -126,9 +134,6 @@ const HomePage = () => {
             rel="noopener noreferrer"
           >
             <SiInstagram />
-          </a>
-          <a href="tel:7149166951">
-            <FiPhone />
           </a>
           <a href="mailto:connor@caviarcon.com">
             <FiMail />
