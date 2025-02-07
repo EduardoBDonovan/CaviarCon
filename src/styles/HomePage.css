@@ -137,29 +137,34 @@
   flex-direction: column;
   gap: 10px;
   width: 80%;
-  max-width: clamp(500px, 50vw, 1000px);
+  max-width: none;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .contact_form input,
 .contact_form textarea {
-  padding: 10px;
+  padding: 0.75rem;
+  width: 100%;
   border: none;
   border-radius: 4px;
   font-size: clamp(1rem, 4vw, 5rem);
+  box-sizing: border-box;
 }
 
 .contact_form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: clamp(10rem, 25vh, 200rem);
 }
 
 .contact_form button {
+  width: 100%;
   padding: 10px;
   border: none;
   border-radius: 4px;
   background: #ffead3;
   color: #4a6741;
-  font-size: clamp(1rem, 4vw, 10rem);
+  font-size: clamp(1rem, 4vw, 5rem);
   cursor: pointer;
 }
 
