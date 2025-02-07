@@ -1,0 +1,59 @@
+/* Ensure smooth scrolling and hide any horizontal overflow */
+.homepage {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Common styling for image sections with parallax effect */
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Overlay text styling with a semi‑transparent background for readability */
+.image-section h1,
+.image-section h2 {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+  /* Using clamp to scale font-size between a min and max value */
+  font-size: clamp(1.5rem, 4vw, 20rem);
+  text-align: center;
+}
+
+/* Styling for green sections */
+.green-section {
+  height: 50vh;
+  background-color: #008000; /* Green color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 20rem);
+  color: white;
+}
+
+/* Basic footer styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 20rem);
+  padding: 20px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .image-section h1,
+  .image-section h2 {
+    padding: 0.75rem;
+  }
+}
