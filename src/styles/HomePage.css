@@ -43,7 +43,7 @@
 
 /* Basic footer styling */
 .footer {
-  background-color: #333;
+  background-color: #4a6741;
   color: #ffead3;
   text-align: center;
   font-size: clamp(1.5rem, 3vw, 20rem);
