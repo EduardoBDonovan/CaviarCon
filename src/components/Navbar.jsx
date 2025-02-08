@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -23,24 +24,24 @@ const Navbar = () => {
         <div className="nav-container">
           <ul>
             <li>
-              <a href="#home" onClick={toggleSidebar}>
+              <Link to="/" onClick={toggleSidebar}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#section2" onClick={toggleSidebar}>
+              <Link to="/gallery" onClick={toggleSidebar}>
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#section3" onClick={toggleSidebar}>
+              <Link to="/recipes" onClick={toggleSidebar}>
                 Recipes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#section4" onClick={toggleSidebar}>
+              <Link to="/contact" onClick={toggleSidebar}>
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

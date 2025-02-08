@@ -1,11 +1,10 @@
 /* Ensure smooth scrolling and hide any horizontal overflow */
-.homepage {
+.contactpage {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-/* Base styling for your parallax sections */
-.parallax {
+.contact-parallax {
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -16,33 +15,6 @@
   align-items: center;
   justify-content: center;
   color: #ffead3;
-}
-
-/* Overlay text styling with a semi‑transparent background for readability */
-.image-section h1,
-.image-section h2 {
-  /* background: rgba(0, 0, 0, 0.5); */
-  padding: 1rem;
-  border-radius: 8px;
-  /* Using clamp to scale font-size between a min and max value */
-  font-size: clamp(1.5rem, 4vw, 20rem);
-  text-align: center;
-}
-
-/* Styling for green sections */
-.green-section {
-  height: 40vh;
-  background-color: #4a6741; /* Green color */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: clamp(1.5rem, 3vw, 20rem);
-  color: #ffead3;
-}
-
-.green-section h2 {
-  font-weight: normal;
 }
 
 /* Basic footer styling */
@@ -123,11 +95,6 @@
   margin-left: 10px;
 }
 
-/* Mobile break: Forces a line break on mobile devices */
-.mobile-break {
-  display: none;
-}
-
 /* Contact form styling in Section 5 */
 .contact_form {
   background: rgba(0, 0, 0, 0.5);
@@ -169,29 +136,11 @@
 }
 
 @media (max-width: 768px) {
-  .parallax.image-section:first-of-type {
-    background-image: url("../images/Con_Side_Mobile.jpg") !important;
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .parallax.image-section:nth-of-type(3) {
-    background-image: url("../images/Con_Front_Mobile.jpg") !important;
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .parallax.image-section:nth-of-type(5) {
+  .contact-parallax.contact-image-section:nth-of-type(1) {
     background-image: url("../images/Con_Food_Mobile.jpg") !important;
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
-  }
-
-  .mobile-break {
-    display: block;
   }
 
   /* Optionally adjust padding or font-size for mobile if desired */

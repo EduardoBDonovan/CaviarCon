@@ -1,6 +1,6 @@
 // FixedBackground.jsx
 import React from "react";
-import "./FixedBackground.css";
+import "../styles/FixedBackground.css";
 
 const FixedBackground = ({ imageUrl, className = "" }) => {
   return (
