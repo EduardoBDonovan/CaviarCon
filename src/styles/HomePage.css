@@ -16,6 +16,8 @@
   align-items: center;
   justify-content: center;
   color: #ffead3;
+  text-shadow: -1px -1px 0 #4a6741, 1px -1px 0 #4a6741, -1px 1px 0 #4a6741,
+    1px 1px 0 #4a6741;
 }
 
 /* Overlay text styling with a semi‑transparent background for readability */
@@ -111,6 +113,7 @@
   width: clamp(30px, 4vw, 500px); /* Adjust width for the desired length */
   height: 2px; /* Skinny line */
   background-color: #ffead3;
+  border: 1px solid #4a6741; /* Skinny border line */
 }
 
 .top-third h1::before {
@@ -171,21 +174,21 @@
 @media (max-width: 768px) {
   .parallax.image-section:first-of-type {
     background-image: url("../images/Con_Side_Mobile.jpg") !important;
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     background-size: cover;
     background-position: center;
   }
 
   .parallax.image-section:nth-of-type(3) {
     background-image: url("../images/Con_Front_Mobile.jpg") !important;
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     background-size: cover;
     background-position: center;
   }
 
   .parallax.image-section:nth-of-type(5) {
     background-image: url("../images/Con_Food_Mobile.jpg") !important;
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     background-size: cover;
     background-position: center;
   }

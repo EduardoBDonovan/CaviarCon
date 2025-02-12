@@ -138,9 +138,10 @@
 @media (max-width: 768px) {
   .contact-parallax.contact-image-section:nth-of-type(1) {
     background-image: url("../images/Con_Food_Mobile.jpg") !important;
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     background-size: cover;
     background-position: center;
+    overflow: hidden;
   }
 
   /* Optionally adjust padding or font-size for mobile if desired */

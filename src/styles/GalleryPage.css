@@ -1,0 +1,73 @@
+/* Ensure smooth scrolling and hide any horizontal overflow */
+.gallerypage {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #4a6741;
+}
+
+.page-header {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-item {
+  padding: 50px;
+  height: 50vh;
+}
+
+.gallery-parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffead3;
+}
+
+/* Basic footer styling */
+.footer {
+  background-color: #4a6741;
+  color: #ffead3;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 20rem);
+  padding: 20px;
+}
+
+/* Footer container: evenly space footer items on one line */
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Footer links styling */
+.footer-container a {
+  color: #ffead3;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Set a consistent size for all footer icons */
+.footer-container svg {
+  width: clamp(1.5rem, 4vw, 20rem);
+  height: clamp(1.5rem, 4vw, 7rem);
+}
+
+/* --- Styling for the top-third text in Section 1 --- */
+
+/* The h1 in the top third is set as inline-block so pseudo-elements work correctly */
+.top-third h1 {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  /* Optionally adjust padding or font-size for mobile if desired */
+}

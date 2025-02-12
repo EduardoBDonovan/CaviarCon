@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import ContactPage from "./components/ContactPage";
+import GalleryPage from "./components/GalleryPage";
+import RecipePage from "./components/RecipePage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/recipes" element={<RecipePage />} />
       </Routes>
     </Router>
   );
