@@ -1,0 +1,25 @@
+/* Basic footer styling */
+.footer {
+  background-color: #4a6741;
+  color: #ffead3;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer container: evenly space footer items on one line */
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Footer links styling */
+.footer-container a {
+  height: 100%;
+  width: 100%;
+  font-size: x-large;
+  color: #ffead3;
+  text-decoration: none;
+  padding: 10px;
+}

@@ -1,13 +1,9 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/HomePage.css";
-import Navbar from "./Navbar";
 import ConFront from "../images/Con_Front.jpg";
 import ConSide from "../images/Con_Side.jpg";
 import ConFood from "../images/Con_Food.jpg";
-
-import { SiTiktok, SiInstagram } from "react-icons/si";
-import { FiPhone, FiMail } from "react-icons/fi";
 
 const HomePage = () => {
   const form = useRef();
@@ -114,29 +110,6 @@ const HomePage = () => {
           <div className="bottom-third"></div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-container">
-          <a
-            href="https://www.tiktok.com/@caviarcon?_t=8qDxp0BJ4yl&_r=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiTiktok />
-          </a>
-          <a
-            href="https://instagram.com/connormcglynn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiInstagram />
-          </a>
-          <a href="mailto:connor@caviarcon.com">
-            <FiMail />
-          </a>
-        </div>
-      </footer>
     </div>
   );
 };
