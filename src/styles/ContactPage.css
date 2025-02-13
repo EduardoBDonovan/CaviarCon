@@ -18,106 +18,11 @@
   color: #ffead3;
 }
 
-/* Split text container to divide image sections into thirds */
-.split-text {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-
-/* Each third takes equal space and centers its content */
-.top-third,
-.middle-third,
-.bottom-third {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* --- Styling for the top-third text in Section 1 --- */
-
-/* The h1 in the top third is set as inline-block so pseudo-elements work correctly */
-.top-third h1 {
-  position: relative;
-  display: inline-block;
-  padding: 0 20px;
-}
-
-/* Pseudo-elements for skinny #FFEAD3 lines on either side of the text */
-.top-third h1::before,
-.top-third h1::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: clamp(30px, 4vw, 500px); /* Adjust width for the desired length */
-  height: 2px; /* Skinny line */
-  background-color: #ffead3;
-}
-
-.top-third h1::before {
-  right: 100%;
-  margin-right: 10px;
-}
-
-.top-third h1::after {
-  left: 100%;
-  margin-left: 10px;
-}
-
-/* Contact form styling in Section 5 */
-.contact_form {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 80%;
-  max-width: none;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.contact_form input,
-.contact_form textarea {
-  padding: 0.75rem;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: clamp(1rem, 4vw, 5rem);
-  box-sizing: border-box;
-}
-
-.contact_form textarea {
-  resize: vertical;
-  min-height: clamp(10rem, 25vh, 200rem);
-}
-
-.contact_form button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background: #ffead3;
-  color: #4a6741;
-  font-size: clamp(1rem, 4vw, 5rem);
-  cursor: pointer;
-}
-
 @media (max-width: 768px) {
   .contact-parallax.contact-image-section:nth-of-type(1) {
     background-image: url("../images/Con_Food_Mobile.jpg") !important;
     /* background-attachment: scroll; */
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-  }
-
-  /* Optionally adjust padding or font-size for mobile if desired */
-  .image-section h1,
-  .image-section h2 {
-    padding: 0.75rem;
   }
 }

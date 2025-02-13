@@ -1,4 +1,7 @@
 body {
   margin: 0;
   background-color: #4a6741;
+  font-family: "Lora", serif;
+  font-weight: 100;
+  font-optical-sizing: auto;
 }

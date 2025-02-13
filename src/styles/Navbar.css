@@ -5,21 +5,20 @@
   left: 0;
   padding: 20px;
   z-index: 1100;
-  font-size: clamp(1.5rem, 4vw, 20rem);
+  font-size: xx-large;
   background: none;
   border: none;
   color: #ffead3;
   cursor: pointer;
 }
 
-/* Sidebar base styling with left alignment */
+/* Sidebar base styling with left alignment and added shadow */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   padding: 20px;
-  /* Responsive sidebar width: minimum 200px, scales with viewport, maximum 1000px */
-  width: clamp(200px, 20vw, 1200px);
+  width: 30%;
   height: 100%;
   background-color: #4a6741;
   color: #ffead3;
@@ -29,16 +28,29 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-shadow: none;
 }
 
 /* When toggled on, slide the sidebar into view */
 .sidebar.open {
   transform: translateX(0);
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay to capture clicks outside the sidebar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* Change to rgba(0,0,0,0.3) if you prefer a dimming effect */
+  z-index: 950;
 }
 
 /* Hamburger button inside the sidebar */
 .hamburger-sidebar {
-  font-size: clamp(1.5rem, 4vw, 20rem);
+  font-size: xx-large;
   background: none;
   border: none;
   color: #ffead3;
@@ -46,24 +58,21 @@
   align-self: flex-start;
 }
 
-/* Navigation container:
-     Sets its height to the viewport height minus 80px (adjust as needed for the hamburger area),
-     and spaces out its child elements (the list items) evenly.
-  */
+/* Navigation container: Sets its height to the viewport height minus 80px */
 .nav-container {
   width: 100%;
-  height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  height: 100vh;
 }
 
 /* Navigation list styles */
 .sidebar ul {
-  /* Remove flex properties here so that the spacing is handled by .nav-container */
   width: 100%;
+  height: 90%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
 }
 
@@ -74,10 +83,8 @@
 .sidebar ul li a {
   color: #ffead3;
   text-decoration: none;
-  /* Responsive font size for navigation links */
-  font-size: clamp(2rem, 4vw, 20rem);
-  padding-left: clamp(5px, 2vw, 100px);
-  padding-block: clamp(10px, 2vw, 500px);
+  font-size: xx-large;
+  padding-block: 10%;
   display: block;
   width: 100%;
   text-align: left;

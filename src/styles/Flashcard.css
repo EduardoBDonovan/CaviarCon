@@ -14,10 +14,11 @@
   background-size: cover;
   background-position: center;
   border-radius: 8px;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .flashcard.flipped {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .flashcard-face {

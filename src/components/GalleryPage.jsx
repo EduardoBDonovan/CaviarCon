@@ -13,6 +13,7 @@ const GalleryPage = () => {
 
   return (
     <div className="gallerypage" id="gallery">
+      <div className="page-header"></div>
       <section className="gallery-item">
         <FlashCard
           frontText="Hello, Front Side!"

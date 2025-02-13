@@ -15,6 +15,9 @@ const Navbar = () => {
         </button>
       )}
 
+      {/* Overlay that covers the entire screen when the sidebar is open */}
+      {open && <div className="overlay" onClick={toggleSidebar}></div>}
+
       {/* Sidebar with sliding animation */}
       <div className={`sidebar ${open ? "open" : ""}`}>
         {/* Hamburger button inside the sidebar */}
@@ -31,11 +34,6 @@ const Navbar = () => {
             <li>
               <Link to="/gallery" onClick={toggleSidebar}>
                 Gallery
-              </Link>
-            </li>
-            <li>
-              <Link to="/recipes" onClick={toggleSidebar}>
-                Recipes
               </Link>
             </li>
             <li>

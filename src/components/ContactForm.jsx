@@ -1,18 +1,19 @@
+// src/components/ContactForm.jsx
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import "../styles/ContactPage.css";
-import ConFood from "../images/Con_Food.jpg";
-import ContactForm from "./ContactForm";
+import "../styles/ContactForm.css"; // Optionally create this file or use an existing CSS file
 
-const ContactPage = () => {
+const ContactForm = () => {
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_PUBLIC_KEY' with your actual EmailJS credentials.
+
+    // Initialize EmailJS with your public key
     emailjs.init({
       publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
     });
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -34,16 +35,18 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contactpage" id="contact">
-      {/* Section 5: Third Image with contact form in the middle */}
-      <section
-        className="contact-parallax contact-image-section"
-        style={{ backgroundImage: `url(${ConFood})` }}
-      >
-        <ContactForm />
-      </section>
-    </div>
+    <form ref={form} onSubmit={handleSubmit} className="contact_form">
+      <input type="text" name="user_name" placeholder="Name" required />
+      <input type="email" name="user_email" placeholder="Email" required />
+      <textarea
+        type="text"
+        name="user_message"
+        placeholder="Message"
+        required
+      ></textarea>
+      <button type="submit">Send</button>
+    </form>
   );
 };
 
-export default ContactPage;
+export default ContactForm;
