@@ -37,7 +37,7 @@
 /* Back face is rotated */
 .flashcard-back {
   transform: rotateY(180deg);
-  background-color: white;
+  background-color: #ffead3;
   overflow-y: auto; /* Enables scrolling for overflowing content */
   max-height: 100%;
   padding: 10px;
@@ -49,9 +49,8 @@
 }
 
 .flashcard-back p {
-  font-weight: bold;
   font-size: larger;
   text-align: center;
   text-decoration: none;
-  color: inherit;
+  color: #4a6741;
 }

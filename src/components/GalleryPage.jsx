@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "../styles/GalleryPage.css";
 import ConFront from "../images/Con_Front.jpg";
 import PulpoYPapas from "../images/gallerypics/PulpoYPapas.jpeg";
-import PokeTacos from "../images/gallerypics/PokeTacosTemp.jpg";
+import PokeTacos from "../images/gallerypics/Poke Tacos.jpg";
 import CremeBrulee from "../images/gallerypics/Creme Brulee.jpeg";
 import FlashCard from "./Flashcard"; // Import the flash card component
 import { SiTiktok, SiInstagram } from "react-icons/si";
