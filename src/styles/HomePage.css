@@ -107,21 +107,21 @@
 @media (max-width: 768px) {
   .parallax.image-section:first-of-type {
     background-image: url("../images/Con_Side_Mobile.jpg") !important;
-    /* background-attachment: scroll; */
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
 
   .parallax.image-section:nth-of-type(3) {
     background-image: url("../images/Con_Front_Mobile.jpg") !important;
-    /* background-attachment: scroll; */
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
 
   .parallax.image-section:nth-of-type(5) {
     background-image: url("../images/Con_Food_Mobile.jpg") !important;
-    /* background-attachment: scroll; */
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
