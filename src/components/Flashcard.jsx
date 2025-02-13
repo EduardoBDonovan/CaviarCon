@@ -9,6 +9,15 @@ const FlashCard = ({ frontText, backText, backgroundImage }) => {
     setFlipped(!flipped);
   };
 
+  const renderBackText = (text) => {
+    return text.split("\n").map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
+  };
+
   return (
     <div className="flashcard-container" onClick={handleClick}>
       <div
@@ -16,9 +25,7 @@ const FlashCard = ({ frontText, backText, backgroundImage }) => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="flashcard-face flashcard-back">
-          <Link to="/recipes" onClick={(e) => e.stopPropagation()}>
-            {backText}
-          </Link>
+          <p>{renderBackText(backText)}</p>
         </div>
       </div>
     </div>
