@@ -2,6 +2,7 @@
   perspective: 100vh; /* Enables 3D space for the flip effect */
   width: 100%;
   height: 100%;
+  touch-action: pan-y;
 }
 
 .flashcard {
@@ -19,6 +20,10 @@
 
 .flashcard.flipped {
   transform: rotateY(-180deg);
+}
+
+.flashcard:not(.flipped) .flashcard-back {
+  pointer-events: none;
 }
 
 .flashcard-face {

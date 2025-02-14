@@ -2,15 +2,26 @@
 .contactpage {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #4a6741;
+}
+
+.contactbody:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background: url("../images/Con_Front.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .contact-parallax {
   position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -19,10 +30,19 @@
 }
 
 @media (max-width: 768px) {
-  .contact-parallax.contact-image-section:nth-of-type(1) {
-    background-image: url("../images/Con_Food_Mobile.jpg") !important;
-    background-attachment: scroll;
+  .contactbody:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    background: url("../images/ConFrontLarge.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: center;
   }
 }
