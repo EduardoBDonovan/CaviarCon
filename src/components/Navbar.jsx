@@ -6,6 +6,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const toggleSidebar = () => setOpen(!open);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+    setOpen(false); // Close the sidebar
+  };
+
   return (
     <>
       {/* Fixed hamburger button when sidebar is closed */}
@@ -27,17 +32,17 @@ const Navbar = () => {
         <div className="nav-container">
           <ul>
             <li>
-              <Link to="/" onClick={toggleSidebar}>
+              <Link to="/" onClick={(toggleSidebar, scrollToTop)}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/gallery" onClick={toggleSidebar}>
+              <Link to="/gallery" onClick={(toggleSidebar, scrollToTop)}>
                 Gallery
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={toggleSidebar}>
+              <Link to="/contact" onClick={(toggleSidebar, scrollToTop)}>
                 Contact
               </Link>
             </li>
