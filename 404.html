@@ -6,7 +6,8 @@
     <title>Redirecting...</title>
     <script>
       var redirectTo = window.location.pathname;
-      window.location.replace("/" + "?redirect=" + redirectTo);
+      var basePath = "/CaviarCon";
+      window.location.replace(basePath + "?redirect=" + redirectTo);
     </script>
   </head>
   <body>
