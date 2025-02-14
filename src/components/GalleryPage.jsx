@@ -17,6 +17,7 @@ const GalleryPage = () => {
   const pypRecipe = useTextFile("PyPRecipe.txt");
   const ptRecipe = useTextFile("PTRecipe.txt");
   const pbcbRecipe = useTextFile("PBCBRecipe.txt");
+  const rptRecipe = useTextFile("RPTRecipe.txt");
 
   return (
     <div className="gallerypage" id="gallery">
@@ -26,6 +27,24 @@ const GalleryPage = () => {
           frontText="Hello, Front Side!"
           backText={pypRecipe}
           backgroundImage={PulpoYPapas}
+        />
+      </section>
+      <section className="gallery-item">
+        <FlashCard
+          id="flashcard"
+          frontText="Hello, Front Side!"
+          backText="Spicy Pesto Bucatini 
+          
+          Recipe Coming Soon"
+          backgroundImage={SpicyPesto}
+        />
+      </section>
+      <section className="gallery-item">
+        <FlashCard
+          id="flashcard"
+          frontText="Hello, Front Side!"
+          backText={rptRecipe}
+          backgroundImage={RosePetalTort}
         />
       </section>
       <section className="gallery-item">
@@ -48,20 +67,10 @@ const GalleryPage = () => {
         <FlashCard
           id="flashcard"
           frontText="Hello, Front Side!"
-          backText="Duck Breast & Beet Puree 
+          backText="Salmon Tartare 
           
           Recipe Coming Soon"
-          backgroundImage={DuckBreast}
-        />
-      </section>
-      <section className="gallery-item">
-        <FlashCard
-          id="flashcard"
-          frontText="Hello, Front Side!"
-          backText="Pesto Spaghetti & Torched Salmon 
-          
-          Recipe Coming Soon"
-          backgroundImage={PestoSpagh}
+          backgroundImage={SalmonTartare}
         />
       </section>
       <section className="gallery-item">
@@ -78,20 +87,10 @@ const GalleryPage = () => {
         <FlashCard
           id="flashcard"
           frontText="Hello, Front Side!"
-          backText="Rose Petal Tortellini 
+          backText="Pesto Spaghetti & Torched Salmon 
           
           Recipe Coming Soon"
-          backgroundImage={RosePetalTort}
-        />
-      </section>
-      <section className="gallery-item">
-        <FlashCard
-          id="flashcard"
-          frontText="Hello, Front Side!"
-          backText="Salmon Tartare 
-          
-          Recipe Coming Soon"
-          backgroundImage={SalmonTartare}
+          backgroundImage={PestoSpagh}
         />
       </section>
       <section className="gallery-item">
@@ -108,10 +107,10 @@ const GalleryPage = () => {
         <FlashCard
           id="flashcard"
           frontText="Hello, Front Side!"
-          backText="Spicy Pesto Bucatini 
+          backText="Duck Breast & Beet Puree 
           
           Recipe Coming Soon"
-          backgroundImage={SpicyPesto}
+          backgroundImage={DuckBreast}
         />
       </section>
     </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/FlashCard.css";
-import { Link } from "react-router-dom";
 
 const FlashCard = ({ frontText, backText, backgroundImage }) => {
   const [flipped, setFlipped] = useState(false);
