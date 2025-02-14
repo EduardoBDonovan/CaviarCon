@@ -13,9 +13,9 @@
   height: 100vh;
   z-index: -10;
   background: url("../images/Con_Side.jpg") no-repeat center center;
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
   background-size: cover;
 }
 

@@ -22,7 +22,7 @@
   width: 100%;
   border: none;
   border-radius: 4px;
-  font-size: xx-large;
+  font-size: x-large;
   box-sizing: border-box;
   font-family: inherit;
 }
@@ -31,10 +31,10 @@
 .contact_form textarea {
   text-align: center;
   resize: vertical;
-  height: 60%;
+  height: 45%;
   border: none;
   border-radius: 4px;
-  font-size: xx-large;
+  font-size: x-large;
   font-family: inherit;
 }
 
@@ -46,7 +46,7 @@
   border-radius: 4px;
   background: #ffead3;
   color: #4a6741;
-  font-size: xx-large;
+  font-size: x-large;
   cursor: pointer;
   font-family: inherit;
 }
